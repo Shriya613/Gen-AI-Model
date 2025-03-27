@@ -1,4 +1,5 @@
 # Markov chain
+
 import random
 from string import punctuation
 from collections import defaultdict
@@ -6,8 +7,9 @@ from collections import defaultdict
 
 class MarkovChain:
     def __init__(self):
-        self.graph = defaultdict(list)
+        self.graph = defaultdict(list) # dictionary that produces lists for the graph
 
+# Gets rid of punctuation and numbers, replaces new lines with spaces, and splits the text into a list of words
     def _tokenize(self, text):
         return (
             text.translate(str.maketrans("", "", punctuation + "1234567890"))
