@@ -1,0 +1,12 @@
+Generative AI
+
+Model focuses on the last word.
+maps the last word tothe next most likely word.
+
+"I try to learn something new every -- "
+new - every
+- every - day
+-every - day
+-each - single
+
+have a hash table/dictionary to a list of possibilities
