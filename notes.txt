@@ -18,3 +18,10 @@ Creating a markov chain to find the next possible word
 #Sentiment analysis
 
 Labeling with post as positive or negative.
+
+
+#Semantic similarity
+
+Embedding -> vector representation of a word or a phrase
+
+Cosine similarity -> used to find similarity between vecotrs in AI systems
