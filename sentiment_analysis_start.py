@@ -44,8 +44,19 @@ class NaiveBayesClassifier:
         pos = []
         neg = []
 
-
-
+        for token in tokens:
+            pos.append(self.pos_counter[token]/self.sample_count)
+            neg.append(self.neg_counter[token]/self.sample_count)
+            
+        pos = sum(pos)
+        neg = sum(neg)
+        
+        if pos > neg:
+            return "pos"
+        elif pos < neg:
+            return "neg"
+        else:
+            return "neutral"
 
 cl = NaiveBayesClassifier(post_comments_with_labels)
 
