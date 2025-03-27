@@ -1,5 +1,7 @@
 Generative AI
 
+# Text completion task
+
 Model focuses on the last word.
 maps the last word tothe next most likely word.
 
@@ -12,3 +14,7 @@ new - every
 Have a hash table/dictionary to a list of possibilities
 
 Creating a markov chain to find the next possible word
+
+#Sentiment analysis
+
+Labeling with post as positive or negative.
