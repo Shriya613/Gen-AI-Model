@@ -9,4 +9,6 @@ new - every
 -every - day
 -each - single
 
-have a hash table/dictionary to a list of possibilities
+Have a hash table/dictionary to a list of possibilities
+
+Creating a markov chain to find the next possible word
