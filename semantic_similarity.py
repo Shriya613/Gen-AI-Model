@@ -15,7 +15,11 @@ word_to_vector_file = os.path.join(CURRENT_DIR, "word_to_vector_trsf.pkl")
 word_to_vector = load_word_to_vector(word_to_vector_file)
 
 #cosine similarity function 
-def cosine_similarity( vec_A, vec_b):
+def cosine_similarity( vec_a, vec_b):
     numerator = sum([vec_a[i] * vec_b[i] for i in range(len(vec_a))])
     denominator = (norm(vec_a) * norm(vec_b))
     return numerator/denominator
+
+print(cosine_similarity(word_to_vector["plant"], word_to_vector["grow"]))
+print(cosine_similarity(word_to_vector["minute"], word_to_vector["plant"]))
+print(cosine_similarity(word_to_vector["plant"], word_to_vector["tree"]))
