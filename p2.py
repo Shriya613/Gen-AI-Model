@@ -16,10 +16,14 @@ class MarkovChain:
             .replace("\n", " ")
             .split(" ")
         )
-
+#builds the graph for generation
     def train(self, text):
         tokens = self._tokenize(text)
-               
+        for i, token in enumerate(tokens): #looping through tokens using enumerate [i is counter for next token]
+            if (len(tokens) - 1) == i: #for the last token, break the loop
+                break
+            self.graph[token].append(tokens[i+1])  # else look up the key for the token, if there's nothing, it will give an empty list which will have the next token appended to it   
+
 
     def generate(self, prompt, length=10):
         # get the lask token from the prompt
